@@ -2,13 +2,14 @@
   "name": "ts-design-pattern",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prettier": "prettier \"./classic23/**/*\" --check",
+    "prettier:fix": "prettier --write -l \"./classic23/**/*\""
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "prettier": "^2.5.1",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.4"
   }
