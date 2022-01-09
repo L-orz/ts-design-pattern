@@ -6,7 +6,7 @@
 
 // Car 接口
 interface Car {
-  run: () => void
+  run(): void
 }
 
 // Car 实现
@@ -45,6 +45,8 @@ class AutoRunCarDecorator extends CarDecorator {
     this.autoRun()
   }
 }
+
+export {}
 
 /**
  * 测试

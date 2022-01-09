@@ -46,6 +46,8 @@ class ElectricCarAdapter implements Car {
   }
 }
 
+export {}
+
 /**
  * 测试
  */

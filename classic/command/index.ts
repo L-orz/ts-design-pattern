@@ -55,6 +55,8 @@ class Waiter {
   }
 }
 
+export {}
+
 /**
  * 测试
  */

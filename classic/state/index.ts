@@ -5,7 +5,7 @@
  * state 在执行完某个动作后，可以直接通过保存的 context 修改当前状态
  * 从而实现了内部状态流转
  */
-export class Context {
+class Context {
   private state: State
 
   constructor(_state: State) {
@@ -33,11 +33,11 @@ abstract class State {
     this.context = _context
   }
 
-  abstract handleWork()
-  abstract handlePlay()
+  abstract handleWork(): void
+  abstract handlePlay(): void
 }
 
-export class HappyState extends State {
+class HappyState extends State {
   handleWork() {
     console.log('Work work work!')
     this.context.transformTo(new SadState())
@@ -47,7 +47,7 @@ export class HappyState extends State {
   }
 }
 
-export class SadState extends State {
+class SadState extends State {
   handleWork() {
     console.log(`Don't urge me!`)
   }
@@ -56,6 +56,8 @@ export class SadState extends State {
     this.context.transformTo(new HappyState())
   }
 }
+
+export {}
 
 /**
  * 测试

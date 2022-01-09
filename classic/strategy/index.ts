@@ -5,7 +5,7 @@
  * 与状态模式相似，但是策略模式的策略选择是由外部传入的，无法在内部自己改变。详情可见状态模式例子。
  */
 
-export class Context {
+class Context {
   private strategy: RouteStrategy
 
   constructor(_stragegy: RouteStrategy) {
@@ -25,17 +25,19 @@ interface RouteStrategy {
   generateRoute(routes: string[]): string
 }
 
-export class NormalRouteStrategy implements RouteStrategy {
+class NormalRouteStrategy implements RouteStrategy {
   generateRoute(routes: string[]) {
     return routes.join(' -> ')
   }
 }
 
-export class ReverseRouteStrategy implements RouteStrategy {
+class ReverseRouteStrategy implements RouteStrategy {
   generateRoute(routes: string[]) {
     return routes.reverse().join(' -> ')
   }
 }
+
+export {}
 
 /**
  * 测试
